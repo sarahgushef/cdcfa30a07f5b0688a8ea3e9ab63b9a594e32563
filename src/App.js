@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Container from '@material-ui/core/Container';
+
+import Header from 'components/Header';
+
+const StyledContainer = styled(Container)`
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <StyledContainer maxWidth='sm'>
+            <Header />
+        </StyledContainer>
+    );
 }
 
 export default App;
