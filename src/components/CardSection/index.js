@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import moment from 'moment/min/moment-with-locales';
 
 import Container from '@material-ui/core/Container';
 
@@ -25,11 +24,14 @@ function CardSection(props) {
     let selectedDate;
 
     if (props.date !== undefined) {
-        moment.locale('id');
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        };
 
-        selectedDate = `${moment(props.date).format('dddd')}, ${moment(
-            props.date
-        ).format('LL')}`;
+        selectedDate = props.date.toLocaleDateString('id-ID', options);
     }
 
     return (
