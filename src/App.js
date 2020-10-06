@@ -13,6 +13,11 @@ const StyledContainer = styled(Container)`
 
 function App() {
     const [open, setOpen] = useState(false);
+    const [date, setDate] = useState();
+
+    const selectedDay = (val) => {
+        setDate(val);
+    };
 
     const handleOpenLocationModal = () => {
         setOpen(true);
@@ -25,8 +30,12 @@ function App() {
     return (
         <StyledContainer maxWidth='sm'>
             <div>
-                <Header handleOpen={handleOpenLocationModal} />
-                <CardSection />
+                <Header
+                    handleOpen={handleOpenLocationModal}
+                    selectedDay={selectedDay}
+                    date={date}
+                />
+                <CardSection date={date} />
             </div>
 
             <LocationModal

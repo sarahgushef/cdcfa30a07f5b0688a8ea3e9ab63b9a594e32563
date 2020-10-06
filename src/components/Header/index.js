@@ -53,10 +53,6 @@ const Calender = styled.div`
 `;
 
 function HeaderComponent(props) {
-    const selectedDay = (val) => {
-        return val;
-    };
-
     return (
         <Header>
             <BackAndAddress>
@@ -73,9 +69,9 @@ function HeaderComponent(props) {
             </BackAndAddress>
             <Calender>
                 <DatePicker
-                    getSelectedDay={selectedDay}
+                    getSelectedDay={props.selectedDay}
                     endDate={14}
-                    selectDate={new Date()}
+                    selectDate={props.date}
                     labelFormat={'MMMM'}
                     color={'#424749'}
                 />
