@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Roasted Chicken with Scrambled Egg",
+        "image": "https://source.unsplash.com/46i7Fqy4bto/1600x900",
+        "productBy": "Kulina",
+        "location": "Uptown Lunch",
+        "price": 35000,
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "name": "Tomato Basil Soup",
+        "image": "https://source.unsplash.com/MP_A0OK_O60/1600x900",
+        "productBy": "Kulina",
+        "location": "Uptown Lunch",
+        "price": 25000,
+        "rating": 3.5
+    },
+    {
+        "id": 3,
+        "name": "Rib Eye Steak",
+        "image": "https://source.unsplash.com/NYBnDWeOX2c/1600x900",
+        "productBy": "Kulina",
+        "location": "Uptown Lunch",
+        "price": 75000,
+        "rating": 4.0
+    },
+    {
+        "id": 4,
+        "name": "Roasted Salmon",
+        "image": "https://source.unsplash.com/Co-T6odt0es/1600x900",
+        "productBy": "Kulina",
+        "location": "Uptown Lunch",
+        "price": 90000,
+        "rating": 4.5
+    }
+]
