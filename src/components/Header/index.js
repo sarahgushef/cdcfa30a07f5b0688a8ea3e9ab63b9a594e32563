@@ -6,10 +6,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DatePicker from 'react-horizontal-datepicker';
 
 const Header = styled.header`
-    position: static;
+    position: sticky;
     padding: 0 16px;
     background-color: white;
     color: black;
+    z-index: 3;
+    top: 0;
 `;
 
 const BackAndAddress = styled.div`
