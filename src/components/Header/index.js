@@ -48,7 +48,7 @@ const Calender = styled.div`
     }
 `;
 
-function index() {
+function HeaderComponent() {
     const selectedDay = (val) => {
         return val;
     };
@@ -80,4 +80,4 @@ function index() {
     );
 }
 
-export default index;
+export default HeaderComponent;
