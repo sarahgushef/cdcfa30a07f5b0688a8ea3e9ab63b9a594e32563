@@ -14,7 +14,7 @@ const CardWrapper = styled(Container)`
     justify-content: flex-start;
 `;
 
-function index() {
+function CardSection() {
     return (
         <CardWrapper>
             {foods.map((food) => (
@@ -24,4 +24,4 @@ function index() {
     );
 }
 
-export default index;
+export default CardSection;
