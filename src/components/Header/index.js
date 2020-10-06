@@ -7,7 +7,7 @@ import DatePicker from 'react-horizontal-datepicker';
 
 const Header = styled.header`
     position: sticky;
-    padding: 16px;
+    padding: 16px 16px 8px 16px;
     background-color: white;
     color: black;
     z-index: 3;
@@ -44,12 +44,53 @@ const StyledExpandMoreIcon = styled(ExpandMoreIcon)`
 `;
 
 const Calender = styled.div`
-    margin-top: 24px;
+    margin: 24px 0 16px 0;
 
     & button,
     span {
         display: none;
     }
+`;
+
+const EatOptionsSection = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 0.1px solid #f1f1f2;
+    border-top: 0.1px solid #f1f1f2;
+`;
+
+const EatOptionsWrapper = styled.div`
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+`;
+
+const LunchWrapper = styled.div`
+    background-color: #424749;
+    width: 50%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 0.1px solid #f1f1f2;
+    cursor: pointer;
+    color: white;
+`;
+
+const DinnerWrapper = styled.div`
+    width: 50%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.1px solid #f1f1f2;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
 `;
 
 function HeaderComponent(props) {
@@ -76,6 +117,13 @@ function HeaderComponent(props) {
                     color={'#424749'}
                 />
             </Calender>
+
+            <EatOptionsSection>
+                <EatOptionsWrapper>
+                    <LunchWrapper>Lunch</LunchWrapper>
+                    <DinnerWrapper>Dinner</DinnerWrapper>
+                </EatOptionsWrapper>
+            </EatOptionsSection>
         </Header>
     );
 }
