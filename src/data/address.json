@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "place": "Kulina",
+        "address": "Jalan Tulodong Atas 28. Senayan, Kebayoran Baru"
+    },
+    {
+        "id": 2,
+        "place": "Pancoran Riverside Appartment",
+        "address": "RT 6/RW 1, Pengadegan, Pancoran, South Jakarta"
+    },
+    {
+        "id": 3,
+        "place": "Jalan Tulodong Atas 28",
+        "address": "Jalan Tulodong Atas 28. Senayan, Kebayoran Baru"
+    },
+    {
+        "id": 4,
+        "place": "Block71 Jakarta",
+        "address": "Ariobimo Sentral, South Jakarta, RT.9/RW.4"
+    }
+]

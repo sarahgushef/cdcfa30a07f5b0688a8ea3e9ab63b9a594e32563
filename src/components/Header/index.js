@@ -24,6 +24,10 @@ const BackAndAddress = styled.div`
         margin-right: 16px;
     }
 
+    & div:nth-child(2) {
+        cursor: pointer;
+    }
+
     & p {
         font-size: 10px;
         margin-bottom: 0;
@@ -48,7 +52,7 @@ const Calender = styled.div`
     }
 `;
 
-function HeaderComponent() {
+function HeaderComponent(props) {
     const selectedDay = (val) => {
         return val;
     };
@@ -59,7 +63,7 @@ function HeaderComponent() {
                 <div>
                     <ArrowBackIcon />
                 </div>
-                <div>
+                <div onClick={props.handleOpen}>
                     <p>ALAMAT PENGIRIMAN</p>
                     <div>
                         <span>Tokopedia Tower</span>
