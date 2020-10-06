@@ -5,6 +5,7 @@ import Container from '@material-ui/core/Container';
 import Header from 'components/Header';
 import CardSection from 'components/CardSection';
 import LocationModal from 'components/LocationModal';
+import CartPopup from 'components/CartPopup';
 
 const StyledContainer = styled(Container)`
     padding-right: 0 !important;
@@ -12,7 +13,8 @@ const StyledContainer = styled(Container)`
 `;
 
 function App() {
-    const [open, setOpen] = useState(false);
+    const [openLocationModal, setOpenLocationModal] = useState(false);
+    const [openCartPopup, setOpenCartPopup] = useState(false);
     const [date, setDate] = useState();
 
     const selectedDay = (val) => {
@@ -20,11 +22,15 @@ function App() {
     };
 
     const handleOpenLocationModal = () => {
-        setOpen(true);
+        setOpenLocationModal(true);
     };
 
     const handleCloseLocationModal = () => {
-        setOpen(false);
+        setOpenLocationModal(false);
+    };
+
+    const addToCart = () => {
+        setOpenCartPopup(true);
     };
 
     return (
@@ -35,13 +41,14 @@ function App() {
                     selectedDay={selectedDay}
                     date={date}
                 />
-                <CardSection date={date} />
+                <CardSection date={date} addToCart={addToCart} />
+                {openCartPopup === true && <CartPopup />}
             </div>
 
             <LocationModal
                 handleClose={handleCloseLocationModal}
-                open={open}
-                setOpen={setOpen}
+                open={openLocationModal}
+                setOpen={setOpenLocationModal}
             />
         </StyledContainer>
     );

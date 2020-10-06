@@ -37,7 +37,11 @@ function CardSection(props) {
             <Date>{selectedDate}</Date>
 
             {foods.map((food) => (
-                <FoodCard key={food.id} data={food} />
+                <FoodCard
+                    key={food.id}
+                    data={food}
+                    addToCart={props.addToCart}
+                />
             ))}
         </CardWrapper>
     );

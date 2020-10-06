@@ -50,7 +50,7 @@ const Rating = styled.div`
     }
 `;
 
-function FoodCard({ data }) {
+function FoodCard({ data, addToCart }) {
     const classes = useStyles();
 
     return (
@@ -92,7 +92,11 @@ function FoodCard({ data }) {
                             maximumSignificantDigits: 3,
                         }).format(data.price)}`}
                     </span>
-                    <Button variant='contained' className={classes.button}>
+                    <Button
+                        variant='contained'
+                        className={classes.button}
+                        onClick={addToCart}
+                    >
                         ADD +
                     </Button>
                 </div>
