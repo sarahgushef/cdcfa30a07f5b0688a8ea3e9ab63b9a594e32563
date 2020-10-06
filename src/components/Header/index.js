@@ -7,7 +7,7 @@ import DatePicker from 'react-horizontal-datepicker';
 
 const Header = styled.header`
     position: sticky;
-    padding: 0 16px;
+    padding: 16px;
     background-color: white;
     color: black;
     z-index: 3;
